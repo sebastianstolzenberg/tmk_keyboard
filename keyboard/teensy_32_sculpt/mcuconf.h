@@ -41,7 +41,9 @@
 /*
  * SERIAL driver system settings.
  */
-#define KINETIS_SERIAL_USE_UART0              TRUE
+#define KINETIS_SERIAL_USE_UART0              FALSE
+#define KINETIS_SERIAL_USE_UART1              FALSE
+#define KINETIS_SERIAL_USE_UART2              FALSE
 
 /*
  * USB driver settings
