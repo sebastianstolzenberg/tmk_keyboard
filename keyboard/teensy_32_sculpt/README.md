@@ -28,8 +28,8 @@ E157925
 
 KB-6160
 
-### Original US layout keyboard matrix
-Original US layout keboard matrix is 8 rows and 18 columns:
+### Original DE layout keyboard matrix
+Original DE layout keboard matrix is 8 rows and 18 columns:
 
           A     B     C     D     E     F     G     H     I
        ----------------------------------------------------
@@ -38,7 +38,7 @@ Original US layout keboard matrix is 8 rows and 18 columns:
     3        HOME        CALC     P     O           I        -->
     4        SLCK         ENT  SCLN     L           K  BSLS  -->
     5                     APP  SLSH  QUOT  RALT        LEFT  -->
-    6        END   RSFT  PGDN         DOT        COMM        --> 
+    6        END   RSFT  PGDN  HASH   DOT        COMM        --> 
     7  LCTL  RGHT          UP  DOWN                    RSPC  -->
     8        PSCR         F11   EQL    F9          F8   F10  -->
 
@@ -47,7 +47,7 @@ Original US layout keboard matrix is 8 rows and 18 columns:
                   -->     7   TAB     Q     2     1                          1
                   -->     Y    F5    F3     W     4          F6              2
                   -->     U     R     E  CAPS     3           T              3
-                  -->     J     F     D           A        LGUI              4
+                  -->     J     F     D  BSLASH   A        LGUI              4
                   -->     H     G    F4     S   ESC              LALT        5
                   -->     M     V     C     X     Z  LSFT                    6
                   -->     N     B  LSPC                                RCTL  7
