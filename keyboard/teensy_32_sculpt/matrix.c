@@ -54,9 +54,9 @@ uint8_t matrix_cols(void)
     return MATRIX_COLS;
 }
 
-#define LED_ON()    do { palSetPad(TEENSY_PIN13_IOPORT, TEENSY_PIN13) ;} while (0)
-#define LED_OFF()   do { palClearPad(TEENSY_PIN13_IOPORT, TEENSY_PIN13); } while (0)
-#define LED_TGL()   do { palTogglePad(TEENSY_PIN13_IOPORT, TEENSY_PIN13); } while (0)
+#define LED_ON()    do { palSetPad(TEENSY_PIN13_IOPORT, TEENSY_PIN13); palSetPad(TEENSY_PIN23_IOPORT, TEENSY_PIN23); } while (0)
+#define LED_OFF()   do { palClearPad(TEENSY_PIN13_IOPORT, TEENSY_PIN13); palClearPad(TEENSY_PIN23_IOPORT, TEENSY_PIN23); } while (0)
+#define LED_TGL()   do { palTogglePad(TEENSY_PIN13_IOPORT, TEENSY_PIN13); palTogglePad(TEENSY_PIN23_IOPORT, TEENSY_PIN23); } while (0)
 
 void matrix_init(void)
 {
@@ -71,7 +71,15 @@ void matrix_init(void)
     }
 
     //debug
-    debug_matrix = true;
+    debug_matrix = false;
+    LED_ON();
+    wait_ms(300);
+    LED_OFF();
+    wait_ms(200);
+    LED_ON();
+    wait_ms(300);
+    LED_OFF();
+    wait_ms(200);
     LED_ON();
     wait_ms(500);
     LED_OFF();
@@ -120,7 +128,7 @@ matrix_row_t matrix_get_row(uint8_t row)
 
 void matrix_print(void)
 {
-    print("\nr/c 0123456789ABCDEF\n");
+    print("\nr/c 0123456789ABCDEFG\n");
     for (uint8_t row = 0; row < MATRIX_ROWS; row++) {
         phex(row); print(": ");
         pbin_reverse16(matrix_get_row(row));

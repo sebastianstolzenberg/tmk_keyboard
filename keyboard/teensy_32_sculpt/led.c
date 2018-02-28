@@ -19,14 +19,17 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #include "led.h"
 
-
+	
 void led_set(uint8_t usb_led) {
     if (usb_led & (1<<USB_LED_CAPS_LOCK)) {
         // output high
-        palSetPadMode(TEENSY_PIN13_IOPORT, TEENSY_PIN13, PAL_MODE_OUTPUT_PUSHPULL);
-        palSetPad(TEENSY_PIN13_IOPORT, TEENSY_PIN13);
+        // palSetPadMode(TEENSY_PIN0_IOPORT, TEENSY_PIN0, PAL_MODE_OUTPUT_PUSHPULL);
+        // palSetPad(TEENSY_PIN0_IOPORT, TEENSY_PIN0);
+        palSetPadMode(TEENSY_PIN23_IOPORT, TEENSY_PIN23, PAL_MODE_OUTPUT_PUSHPULL);
+        palSetPad(TEENSY_PIN23_IOPORT, TEENSY_PIN23);
     } else {
         // Hi-Z
-        palSetPadMode(TEENSY_PIN13_IOPORT, TEENSY_PIN13, PAL_MODE_INPUT);
+        // palSetPadMode(TEENSY_PIN0_IOPORT, TEENSY_PIN0, PAL_MODE_INPUT);
+        palSetPadMode(TEENSY_PIN23_IOPORT, TEENSY_PIN23, PAL_MODE_INPUT);
     }
 }
