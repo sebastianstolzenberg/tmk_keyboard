@@ -72,17 +72,6 @@ void matrix_init(void)
 
     //debug
     debug_matrix = false;
-    LED_ON();
-    wait_ms(300);
-    LED_OFF();
-    wait_ms(200);
-    LED_ON();
-    wait_ms(300);
-    LED_OFF();
-    wait_ms(200);
-    LED_ON();
-    wait_ms(500);
-    LED_OFF();
 }
 
 uint8_t matrix_scan(void)
